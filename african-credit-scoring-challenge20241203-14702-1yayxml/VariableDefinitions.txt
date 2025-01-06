@@ -1,0 +1,32 @@
+ID : Un identifiant unique pour chaque entrée dans le dataset.
+
+customer_id : Identifiant unique pour chaque client dans le dataset.
+
+country_id : Identifiant ou code représentant le pays où réside le client ou où le prêt a été émis.
+
+tbl_loan_id : Identifiant unique pour chaque prêt associé au client.
+
+Total_Amount : Le montant total du prêt initialement accordé au client.
+
+Total_Amount_to_Repay : Le montant total que le client est censé rembourser, incluant le principal, les intérêts et les frais.
+
+loan_type : La catégorie ou le type de prêt.
+
+disbursement_date : La date à laquelle le montant du prêt a été versé au client.
+
+duration : La durée du prêt, généralement exprimée en jours.
+
+lender_id : Identifiant unique pour le prêteur ou l'institution qui a émis le prêt.
+
+New_versus_Repeat : Indique si le prêt est le premier prêt du client ("New") ou si le client a déjà contracté des prêts auparavant ("Repeat").
+
+Amount_Funded_By_Lender : La part du prêt directement financée par le prêteur.
+
+Lender_portion_Funded : Pourcentage du montant total du prêt financé par le prêteur.
+
+due_date : La date à laquelle le remboursement du prêt doit être effectué.
+
+Lender_portion_to_be_repaid : La part du prêt en cours qui doit être remboursée au prêteur.
+
+target : Cette variable prend la valeur 0 ou 1. 1 signifie que le client a fait défaut sur le prêt, tandis que 0 signifie que le client a remboursé le prêt.
+
