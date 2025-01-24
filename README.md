@@ -1,6 +1,7 @@
 # Loan Default Prediction Challenge
 
 ## 🌟 Challenge Overview
+### [CHALLENGE](https://zindi.africa/competitions/african-credit-scoring-challenge)
 
 Financial institutions need to predict **loan defaults** to mitigate risk and optimise lending decisions. In Africa’s rapidly growing financial markets, characterised by diverse customer demographics and dynamic economic conditions, accurately assessing default risk has never been more critical.
 
