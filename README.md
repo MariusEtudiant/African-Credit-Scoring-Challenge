@@ -23,7 +23,7 @@ The challenge was provided by a **private asset manager** operating in several f
 
 ## 📊 My Contribution
 
-I participated in this challenge and achieved an **F1-score of 0.70**, which positioned me competitively early in the competition. Tackling this challenge required:
+I participated in this challenge and achieved an **F1-score of 0.71**, which positioned me competitively early in the competition. Tackling this challenge required:
 
 - **Dealing with imbalanced data**: Techniques like **SMOTEENN** and other advanced resampling methods were crucial.
 - **Feature engineering**: Identifying and incorporating unique economic and demographic factors relevant to African financial markets.
