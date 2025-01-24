@@ -48,14 +48,6 @@ I participated in this challenge and achieved an **F1-score of 0.71**, which pos
 
 ---
 
-## 🎯 Impact
-
-By accurately predicting loan defaults, this work helps:
-- Improve financial decision-making processes.
-- Enable risk-based lending, reducing losses and expanding access to financial markets.
-- Innovate in the design of credit scoring solutions tailored to Africa’s financial landscape.
-
----
 
 ## 🚀 Reflection
 This challenge was complex yet rewarding, demanding a blend of precision, ingenuity, and creativity. From dealing with imbalanced data to proposing scalable solutions, it tested not only technical expertise but also strategic thinking.
