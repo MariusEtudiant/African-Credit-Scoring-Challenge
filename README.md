@@ -39,7 +39,7 @@ I participated in this challenge and achieved an **F1-score of 0.71**, which pos
    - Ensuring the model was generalisable across diverse customer demographics.
 
 2. **Machine Learning Techniques**:
-   - Implemented advanced **classification models** including Gradient Boosting and XGBoost.
+   - Implemented advanced **classification models** including XGBoost.
    - Handled imbalanced classes with **SMOTEENN**, a hybrid of oversampling and undersampling.
 
 3. **Credit Scoring Function**:
