@@ -9,8 +9,8 @@ This project was part of the [African Credit Scoring Challenge](https://zindi.af
 ### Key Achievements:
 - **F1-score**: Achieved a competitive score of **0.71** early in the competition.
 - **Imbalanced Data**: Addressed class imbalance using **SMOTEENN** for hybrid resampling.
-- **Feature Engineering**: Incorporated demographic and economic factors specific to African markets.
-- **Model Optimisation**: Fine-tuned **XGBoost** for robustness and generalisability.
+- **Feature Engineering**: Incorporated demographic and economic factors specific to African markets (economic-dataset.csv).
+- **Model Optimisation**: Fine-tuned for robustness and generalisability.
 - **Credit Scoring**: Developed a scalable function to classify probabilities into actionable risk categories.
 
 ---
@@ -18,7 +18,7 @@ This project was part of the [African Credit Scoring Challenge](https://zindi.af
 ## 🔑 Technical Highlights
 1. **Data Challenges**:
    - Managed significant class imbalances with advanced resampling techniques.
-   - Ensured generalisability across diverse customer demographics.
+   - Ensured generalisability across diverse customer demographics because the train dataset contain only Kenya data, but the test dataset on Zindi can contain other country data like Ghana.
 
 2. **Machine Learning Techniques**:
    - Used **XGBoost** for high-performance classification.
@@ -44,18 +44,4 @@ This project was both challenging and rewarding, demanding a mix of technical ex
 ## 📬 Contact
 Feel free to reach out if you'd like to discuss this project or my approach! 😊  
 
-## 📂 Repository Structure
-
-📂 Repository Structure
-├── data/                  # Placeholder for dataset (not included due to confidentiality)
-├── notebooks/             # Jupyter notebooks with detailed analysis and code
-│   ├── data_preprocessing.ipynb
-│   ├── feature_engineering.ipynb
-│   ├── model_training.ipynb
-│   ├── credit_scoring_function.ipynb
-├── src/                   # Python scripts for modular implementation
-│   ├── data_cleaning.py
-│   ├── feature_engineering.py
-│   ├── model_training.py
-├── README.md              # Project documentation
 
