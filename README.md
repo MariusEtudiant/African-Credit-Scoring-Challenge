@@ -43,8 +43,19 @@ This project was both challenging and rewarding, demanding a mix of technical ex
 
 ## 📬 Contact
 Feel free to reach out if you'd like to discuss this project or my approach! 😊  
-- **Email**: [Your Email]
-- **LinkedIn**: [Your LinkedIn Profile]
-
 
 ## 📂 Repository Structure
+
+📂 Repository Structure
+├── data/                  # Placeholder for dataset (not included due to confidentiality)
+├── notebooks/             # Jupyter notebooks with detailed analysis and code
+│   ├── data_preprocessing.ipynb
+│   ├── feature_engineering.ipynb
+│   ├── model_training.ipynb
+│   ├── credit_scoring_function.ipynb
+├── src/                   # Python scripts for modular implementation
+│   ├── data_cleaning.py
+│   ├── feature_engineering.py
+│   ├── model_training.py
+├── README.md              # Project documentation
+
