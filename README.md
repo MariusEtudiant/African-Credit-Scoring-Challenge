@@ -1,47 +1,42 @@
-# Loan Default Prediction Challenge
+# Loan default prediction: African Credit Scoring Challenge (Zindi)
 
-## 🌟 Overview
-This project was part of the [African Credit Scoring Challenge](https://zindi.africa/competitions/african-credit-scoring-challenge), aiming to predict **loan defaults** in Africa’s dynamic financial markets. The objective was to build a robust **machine learning model** and a **scalable credit scoring function** to assist financial institutions in mitigating risk and optimising lending decisions.
+Predict which loans will default, for lenders in African markets. The training data covers
+68,654 loans in Kenya, of which only 1.8% default; the competition test set also contains
+loans from Ghana, a country absent from training.
 
----
+## Results
 
-## 📊 My Contribution
-### Key Achievements:
-- **F1-score**: Achieved a competitive score of **0.71** early in the competition.
-- **Imbalanced Data**: Addressed class imbalance using **SMOTEENN** for hybrid resampling.
-- **Feature Engineering**: Incorporated demographic and economic factors specific to African markets (economic-dataset.csv).
-- **Model Optimisation**: Fine-tuned for robustness and generalisability.
-- **Credit Scoring**: Developed a scalable function to classify probabilities into actionable risk categories.
+Stratified validation split (13,731 loans, 252 defaults):
 
----
+| | Precision | Recall | F1 |
+|---|---:|---:|---:|
+| Defaults (LightGBM, best model) | 0.91 | 0.87 | **0.89** |
 
-## 🔑 Technical Highlights
-1. **Data Challenges**:
-   - Managed significant class imbalances with advanced resampling techniques.
-   - Ensured generalisability across diverse customer demographics because the train dataset contain only Kenya data, but the test dataset on Zindi can contain other country data like Ghana.
+An early submission scored **0.71** on the public leaderboard. The gap with validation is the
+main lesson of the project: a model validated on Kenyan loans only does not transfer as well to
+another country. Validation on held-out countries, or features that travel across markets
+(macroeconomic indicators rather than country-specific ones), is where the remaining work lies.
 
-2. **Machine Learning Techniques**:
-   - Used **XGBoost** for high-performance classification.
-   - Applied **SMOTEENN** for handling imbalanced data.
+## Approach
 
-3. **Credit Scoring Function**:
-   - Designed a scalable system to categorise risk levels based on model predictions.
-   - Provided actionable insights for financial decision-making.
+- **Features:** repayment ratio, log of the loan amount, and macroeconomic indicators of each
+  country joined to the loans (interest rates and spread, inflation, exchange rate,
+  unemployment) and interactions between them, selected with mutual information.
+- **Imbalance:** six options compared: no resampling, SMOTE, BorderlineSMOTE, ADASYN,
+  SMOTEENN and SMOTETomek.
+- **Model search:** one Optuna study over the resampling method, the algorithm (XGBoost,
+  LightGBM, CatBoost) and their hyperparameters, maximising the F1 score on defaults.
+- **Finding:** the best configuration used **no resampling**. LightGBM handled the 1.8% minority
+  class better on its own than with synthetic samples: the best resampled trial (SMOTE) reached
+  an F1 of 0.87, against 0.89 without.
 
----
+## Run
 
-## 🚀 Reflection
-This project was both challenging and rewarding, demanding a mix of technical expertise and strategic thinking. It highlights my ability to handle real-world data challenges and propose scalable solutions.
+```bash
+pip install pandas numpy scikit-learn xgboost lightgbm catboost imbalanced-learn optuna matplotlib seaborn
+jupyter notebook credit_scoring.ipynb
+```
 
----
-
-## 🛠️ Tools & Libraries
-- **Languages**: Python
-- **Libraries**: Pandas, NumPy, Scikit-learn, XGBoost, Ensemble Learning, Matplotlib, Seaborn
-
----
-
-## 📬 Contact
-Feel free to reach out if you'd like to discuss this project or my approach! 😊  
-
-
+Download `Train.csv`, `Test.csv` and `economic_indicators.csv` from the
+[competition page](https://zindi.africa/competitions/african-credit-scoring-challenge) and put
+them next to the notebook. The competition data is not redistributed here.

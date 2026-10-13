@@ -1,0 +1,5 @@
+# Zindi competition data: download it from the competition page, do not commit it
+*.csv
+VariableDefinitions.txt
+manifest-*.json
+.ipynb_checkpoints/
